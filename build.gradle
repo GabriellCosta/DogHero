@@ -1,14 +1,17 @@
+import dependencies.BuildPlugins
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.kotlin_version = '1.3.21'
     repositories {
         google()
         jcenter()
     }
+
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.3.2'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath BuildPlugins.androidGradlePlugin
+        classpath BuildPlugins.kotlinGradlePlugin
+        classpath BuildPlugins.detektPlugin
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -24,4 +27,34 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+subprojects {
+
+    afterEvaluate {
+        if (!project.hasProperty("android")) return
+
+        android {
+            compileSdkVersion AndroidConfig.compileSdk
+
+            defaultConfig {
+                minSdkVersion AndroidConfig.minSdk
+                targetSdkVersion AndroidConfig.targetSdk
+                versionCode 01
+                versionName "0.0.1"
+                testInstrumentationRunner AndroidConfig.instrumentationTestRunner
+            }
+
+            compileOptions {
+                sourceCompatibility 1.8
+                targetCompatibility 1.8
+            }
+
+            sourceSets {
+                main.java.srcDirs += 'src/main/kotlin'
+                test.java.srcDirs += 'src/test/kotlin'
+                androidTest.java.srcDirs += 'src/androidTest/kotlin'
+            }
+        }
+    }
 }
