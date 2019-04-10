@@ -9,4 +9,7 @@ dependencies {
 
     implementation Dependencies.kotlinStdlib
 
+    implementation Dependencies.lifecycle
+    implementation Dependencies.viewModel
+
 }
