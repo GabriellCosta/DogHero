@@ -1,0 +1,2 @@
+apply plugin: 'com.android.feature'
+apply plugin: 'kotlin-android'
