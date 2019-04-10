@@ -1,4 +1,5 @@
 import dependencies.Dependencies
+import dependencies.TestDependencies
 
 apply plugin: 'com.android.feature'
 apply plugin: 'kotlin-android'
@@ -11,5 +12,8 @@ dependencies {
 
     implementation Dependencies.lifecycle
     implementation Dependencies.viewModel
+
+    testImplementation TestDependencies.jUnit
+    testImplementation TestDependencies.mockitoKotlin
 
 }
