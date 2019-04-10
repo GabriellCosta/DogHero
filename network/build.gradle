@@ -6,7 +6,7 @@ apply plugin: 'kotlin-android'
 
 android {
     defaultConfig {
-        buildConfigField "String", "API_URL", "\"\""
+        buildConfigField "String", "API_URL", "\"http://demo3009949.mockable.io\""
     }
 }
 
