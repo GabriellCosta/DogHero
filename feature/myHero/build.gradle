@@ -1,2 +1,12 @@
+import dependencies.Dependencies
+
 apply plugin: 'com.android.feature'
 apply plugin: 'kotlin-android'
+
+dependencies {
+
+    implementation project(':network')
+
+    implementation Dependencies.kotlinStdlib
+
+}
