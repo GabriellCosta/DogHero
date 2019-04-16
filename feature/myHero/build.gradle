@@ -12,10 +12,13 @@ dependencies {
 
     implementation Dependencies.lifecycle
     implementation Dependencies.viewModel
+    implementation Dependencies.viewModelExtensions
 
     implementation Dependencies.appCompat
     implementation Dependencies.constraintLayout
     implementation Dependencies.recyclerView
+
+    implementation Dependencies.imageFetcher
 
     testImplementation TestDependencies.jUnit
     testImplementation TestDependencies.mockitoKotlin
