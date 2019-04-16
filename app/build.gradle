@@ -18,6 +18,8 @@ android {
 }
 
 dependencies {
+    implementation project(":feature:myhero")
+
     implementation dependencies.Dependencies.appCompat
 
     implementation dependencies.Dependencies.gson
