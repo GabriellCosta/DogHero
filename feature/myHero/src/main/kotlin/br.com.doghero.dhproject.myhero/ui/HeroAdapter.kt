@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.doghero.dhproject.myhero.R
 import br.com.doghero.dhproject.myhero.ui.vo.HeroVO
 import br.com.doghero.dhproject.myhero.util.bind
+import com.squareup.picasso.Picasso
 
 internal class HeroAdapter(private val heroList: List<HeroVO>) :
     RecyclerView.Adapter<HeroAdapter.HeroViewHolder>() {
@@ -30,7 +31,7 @@ internal class HeroAdapter(private val heroList: List<HeroVO>) :
 
     class HeroViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        private val userImage by bind<ImageView>(R.id.img_list_item_hero_photo)
+        private val imageView by bind<ImageView>(R.id.img_list_item_hero_photo)
         private val nameView by bind<TextView>(R.id.txt_list_item_hero_name)
         private val addressView by bind<TextView>(R.id.txt_list_item_hero_addres)
 
@@ -38,7 +39,10 @@ internal class HeroAdapter(private val heroList: List<HeroVO>) :
 
             item.apply {
 
-
+                Picasso
+                    .with(imageView.context)
+                    .load(userImage)
+                    .into(imageView)
 
                 nameView.text = item.userName
                 addressView.text = item.address
