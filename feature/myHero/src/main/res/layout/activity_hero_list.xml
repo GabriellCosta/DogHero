@@ -1,55 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
+<LinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   android:layout_width="match_parent"
-  android:layout_height="match_parent">
+  android:layout_height="match_parent"
+  android:orientation="vertical">
 
-  <androidx.constraintlayout.widget.ConstraintLayout
+  <androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar_"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    app:title="@string/hero_list_title"/>
+
+  <androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-      android:id="@+id/txt_hero_list_recent_title"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:padding="@dimen/mediumSpace"
-      android:background="@color/heroListTitle"
-      android:text="@string/hero_list_recent_title"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
 
-    <androidx.recyclerview.widget.RecyclerView
-      android:id="@+id/rv_hero_list_recent"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/txt_hero_list_recent_title"/>
+      <TextView
+        android:id="@+id/txt_hero_list_recent_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/mediumSpace"
+        android:background="@color/heroListTitle"
+        android:text="@string/hero_list_recent_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-    <TextView
-      android:id="@+id/txt_hero_list_favorite_title"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="@dimen/mediumSpace"
-      android:padding="@dimen/mediumSpace"
-      android:background="@color/heroListTitle"
-      android:text="@string/hero_list_favorite_title"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/rv_hero_list_recent"/>
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_hero_list_recent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_hero_list_recent_title"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-      android:id="@+id/rv_hero_list_favorite"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginBottom="@dimen/mediumSpace"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/txt_hero_list_favorite_title"/>
+      <TextView
+        android:id="@+id/txt_hero_list_favorite_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mediumSpace"
+        android:padding="@dimen/mediumSpace"
+        android:background="@color/heroListTitle"
+        android:text="@string/hero_list_favorite_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_hero_list_recent"/>
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_hero_list_favorite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/mediumSpace"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_hero_list_favorite_title"/>
 
-</androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
