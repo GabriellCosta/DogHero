@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.doghero.dhproject.myhero.R
 import br.com.doghero.dhproject.myhero.ui.vo.HeroVO
 import br.com.doghero.dhproject.myhero.util.ImageFetcher
+import br.com.doghero.dhproject.myhero.util.MonetaryBoldSpannable
 import br.com.doghero.dhproject.myhero.util.bind
 
 internal class HeroAdapter(private val heroList: List<HeroVO>) :
@@ -32,6 +33,7 @@ internal class HeroAdapter(private val heroList: List<HeroVO>) :
     class HeroViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         private val imageFetcher = ImageFetcher()
+        private val monetaryBoldSpannable = MonetaryBoldSpannable()
 
         private val imageView by bind<ImageView>(R.id.img_list_item_hero_photo)
         private val nameView by bind<TextView>(R.id.txt_list_item_hero_name)
@@ -48,6 +50,7 @@ internal class HeroAdapter(private val heroList: List<HeroVO>) :
                 nameView.text = item.userName
                 addressView.text = item.address
                 priceView.text = item.price
+                monetaryBoldSpannable.makeBold(priceView)
                 superHeroImage.visibility = if (superHero) View.VISIBLE else View.GONE
             }
 
