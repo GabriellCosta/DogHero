@@ -17,7 +17,8 @@ import br.com.doghero.dhproject.network.ui.observeOnSuccess
 
 class HeroListActivity : AppCompatActivity() {
 
-    private val recyclerview by bind<RecyclerView>(R.id.rv_hero_list)
+    private val recentListView by bind<RecyclerView>(R.id.rv_hero_list_recent)
+    private val favoriteListView by bind<RecyclerView>(R.id.rv_hero_list_favorite)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,11 +44,13 @@ class HeroListActivity : AppCompatActivity() {
     }
 
     private fun recentsSuccess(list : List<HeroVO>) {
-        recyclerview.adapter = HeroAdapter(list)
-        recyclerview.layoutManager = LinearLayoutManager(this)
+        recentListView.adapter = HeroAdapter(list)
+        recentListView.layoutManager = LinearLayoutManager(this)
 
     }
 
-    private fun favoriteSuccess() {
+    private fun favoriteSuccess(list : List<HeroVO>) {
+        favoriteListView.adapter = HeroAdapter(list)
+        favoriteListView.layoutManager = LinearLayoutManager(this)
     }
 }

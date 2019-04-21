@@ -3,5 +3,6 @@
 
   <color name="reservation_button">#EF3A18</color>
   <color name="chat_button">#1E000000</color>
+  <color name="heroListTitle">#EFF0F3</color>
   
 </resources>
