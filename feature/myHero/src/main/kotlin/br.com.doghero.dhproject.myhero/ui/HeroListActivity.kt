@@ -45,12 +45,14 @@ class HeroListActivity : AppCompatActivity() {
 
     private fun recentsSuccess(list : List<HeroVO>) {
         recentListView.adapter = HeroAdapter(list)
+        recentListView.addItemDecoration(HeroItemDecoration(resources))
         recentListView.layoutManager = LinearLayoutManager(this)
 
     }
 
     private fun favoriteSuccess(list : List<HeroVO>) {
         favoriteListView.adapter = HeroAdapter(list)
+        favoriteListView.addItemDecoration(HeroItemDecoration(resources))
         favoriteListView.layoutManager = LinearLayoutManager(this)
     }
 }
