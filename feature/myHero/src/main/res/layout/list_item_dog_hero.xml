@@ -7,6 +7,7 @@
   android:layout_height="wrap_content">
 
   <ImageView
+    android:contentDescription="@string/hero_list_image_content_description"
     android:id="@+id/img_list_item_hero_photo"
     android:layout_width="@dimen/userImage"
     android:layout_height="@dimen/userImage"
@@ -33,7 +34,7 @@
     android:layout_marginTop="@dimen/mediumSpace"
     android:layout_marginStart="@dimen/mediumSpace"
     android:layout_marginEnd="@dimen/smallSpace"
-    android:text="Conversar"
+    android:text="@string/hero_list_chat_button"
     app:layout_constraintEnd_toStartOf="@+id/btn_list_item_hero_reserve"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/img_list_item_hero_photo"/>
@@ -46,7 +47,7 @@
     android:layout_marginTop="@dimen/mediumSpace"
     android:layout_marginStart="@dimen/smallSpace"
     android:layout_marginEnd="@dimen/mediumSpace"
-    android:text="Reservar de novo"
+    android:text="@string/hero_list_reserve_button"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toEndOf="@+id/btn_list_item_hero_chat"
     app:layout_constraintTop_toBottomOf="@+id/img_list_item_hero_photo"/>

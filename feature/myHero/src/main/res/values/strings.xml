@@ -8,4 +8,7 @@
   <string name="hero_item_list_super_hero_content_description">É um superhero</string>
   <string name="hero_list_title">Meus Heróis</string>
   <string name="list_item_price_description">por Noite</string>
+  <string name="hero_list_reserve_button">Reservar de novo</string>
+  <string name="hero_list_chat_button">Conversar</string>
+  <string name="hero_list_image_content_description">Imagem do usuario</string>
 </resources>
