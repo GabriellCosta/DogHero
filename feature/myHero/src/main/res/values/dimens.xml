@@ -3,6 +3,7 @@
 
   <dimen name="buttonHeight">40dp</dimen>
   <dimen name="userImage">64dp</dimen>
+  <dimen name="iconImage">24dp</dimen>
 
   <dimen name="smallSpace">8dp</dimen>
   <dimen name="mediumSpace">16dp</dimen>

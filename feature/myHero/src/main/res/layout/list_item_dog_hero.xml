@@ -19,8 +19,8 @@
   <ImageView
     android:contentDescription="@string/hero_item_list_super_hero_content_description"
     android:id="@+id/img_list_item_super_hero"
-    android:layout_width="24dp"
-    android:layout_height="24dp"
+    android:layout_width="@dimen/iconImage"
+    android:layout_height="@dimen/iconImage"
     android:src="@drawable/host_list_icon_badge"
     app:layout_constraintBottom_toBottomOf="@+id/img_list_item_hero_photo"
     app:layout_constraintEnd_toEndOf="@+id/img_list_item_hero_photo"/>
