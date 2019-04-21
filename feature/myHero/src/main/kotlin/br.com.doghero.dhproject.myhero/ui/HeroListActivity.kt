@@ -31,11 +31,7 @@ class HeroListActivity : AppCompatActivity() {
     private fun prepareLayout() {
         val viewModel = MyHeroesViewModel(RepositoryImpl(NetworkClient.getApi(Api::class.java)))
 
-        viewModel.myHeroes.observeOnSuccess(this) { unit ->
-            loading.visibility = View.GONE
-            scrollView.visibility = View.VISIBLE
-
-        }
+        viewModel.myHeroes.observeOnSuccess(this, ::fetchSuccess)
 
         viewModel.recents
             .observeOnSuccess(this, ::recentsSuccess)
@@ -45,6 +41,11 @@ class HeroListActivity : AppCompatActivity() {
             .observeOnSuccess(this, ::favoriteSuccess)
 
         viewModel.fetchHeroes()
+    }
+
+    private fun fetchSuccess() {
+        loading.visibility = View.GONE
+        scrollView.visibility = View.VISIBLE
     }
 
     private fun recentsSuccess(list : List<HeroVO>) {
