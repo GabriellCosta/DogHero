@@ -16,6 +16,15 @@
     app:layout_constraintTop_toTopOf="parent"
     tools:srcCompat="@tools:sample/avatars"/>
 
+  <ImageView
+    android:contentDescription="@string/hero_item_list_super_hero_content_description"
+    android:id="@+id/img_list_item_super_hero"
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:src="@drawable/host_list_icon_badge"
+    app:layout_constraintBottom_toBottomOf="@+id/img_list_item_hero_photo"
+    app:layout_constraintEnd_toEndOf="@+id/img_list_item_hero_photo"/>
+
   <Button
     android:id="@+id/btn_list_item_hero_chat"
     style="@style/Button.Chat"
@@ -65,13 +74,13 @@
     tools:text="@tools:sample/cities"/>
 
   <ImageButton
-    android:contentDescription="@string/hero_item_list_favorite_unselected"
-    android:layout_marginEnd="@dimen/mediumSpace"
-    android:layout_marginTop="@dimen/mediumSpace"
-    android:background="@drawable/icon_like_border_vector_gray_battleship"
     android:id="@+id/btn_item_list_favorite"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/mediumSpace"
+    android:layout_marginEnd="@dimen/mediumSpace"
+    android:background="@drawable/icon_like_border_vector_gray_battleship"
+    android:contentDescription="@string/hero_item_list_favorite_unselected"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toTopOf="parent"/>
 

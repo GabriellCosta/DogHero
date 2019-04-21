@@ -37,6 +37,7 @@ internal class HeroAdapter(private val heroList: List<HeroVO>) :
         private val nameView by bind<TextView>(R.id.txt_list_item_hero_name)
         private val addressView by bind<TextView>(R.id.txt_list_item_hero_addres)
         private val priceView by bind<TextView>(R.id.txt_list_item_hero_price)
+        private val superHeroImage by bind<View>(R.id.img_list_item_super_hero)
 
         private val favoriteButton by bind<ImageView>(R.id.btn_item_list_favorite)
 
@@ -47,8 +48,9 @@ internal class HeroAdapter(private val heroList: List<HeroVO>) :
                 nameView.text = item.userName
                 addressView.text = item.address
                 priceView.text = item.price
+                superHeroImage.visibility = if (superHero) View.VISIBLE else View.GONE
             }
-            
+
             favoriteButton.setOnClickListener(FavoriteFlipButtonBehavior())
         }
     }
