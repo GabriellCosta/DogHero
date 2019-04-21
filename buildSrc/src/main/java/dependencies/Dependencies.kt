@@ -11,7 +11,7 @@ internal object Versions {
     const val mockitoDexMaker = "2.19.0"
     const val androidJUnit = "1.0.2"
     const val espressoCore = "3.0.2"
-    const val roboletric = "4.0"
+    const val roboletric = "4.2"
     const val kodeinDI = "5.3.0"
     const val timber = "4.7.1"
     const val livedata ="2.0.0"
@@ -53,6 +53,11 @@ object Dependencies {
 }
 
 object TestDependencies {
+
+    val androidx = "androidx.test:core:1.0.0"
+    val runner = "androidx.test:runner:1.1.0"
+    val rules = "androidx.test:rules:1.1.0"
+    val junitX = "androidx.test.ext:junit:1.1.0"
 
     val jUnit = "junit:junit:${Versions.jUnit4}"
     val kotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:${PluginsVersions.kotlin}"
