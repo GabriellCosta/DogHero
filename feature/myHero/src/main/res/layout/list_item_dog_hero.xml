@@ -88,7 +88,7 @@
     android:id="@+id/txt_list_item_hero_price"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/mediumSpace"
+    android:layout_marginTop="@dimen/smallSpace"
     android:layout_marginEnd="@dimen/smallSpace"
     tools:text="R$ 36,55"
     android:textSize="16sp"
@@ -96,11 +96,12 @@
     app:layout_constraintTop_toBottomOf="@+id/btn_item_list_favorite"/>
 
   <TextView
+    android:textSize="12sp"
     android:id="@+id/txt_list_item_hero_price_tip"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginEnd="@dimen/smallSpace"
-    android:text="TextView"
+    android:text="@string/list_item_price_description"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/txt_list_item_hero_price"
     />

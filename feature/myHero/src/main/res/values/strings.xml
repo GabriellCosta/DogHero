@@ -7,4 +7,5 @@
   <string name="hero_item_list_favorite_unselected">Hero não favoritado, clique para favoritar</string>
   <string name="hero_item_list_super_hero_content_description">É um superhero</string>
   <string name="hero_list_title">Meus Heróis</string>
+  <string name="list_item_price_description">por Noite</string>
 </resources>
