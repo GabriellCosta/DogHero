@@ -8,27 +8,35 @@
 
   <ImageView
     android:id="@+id/img_list_item_hero_photo"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="@dimen/userImage"
+    android:layout_height="@dimen/userImage"
+    android:layout_marginTop="@dimen/mediumSpace"
+    android:layout_marginStart="@dimen/mediumSpace"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    tools:layout_editor_absoluteX="16dp"
-    tools:layout_editor_absoluteY="16dp"
     tools:srcCompat="@tools:sample/avatars"/>
 
   <Button
     android:id="@+id/btn_list_item_hero_chat"
+    style="@style/Button.Chat"
     android:layout_width="0dp"
-    android:layout_height="wrap_content"
+    android:layout_height="@dimen/buttonHeight"
+    android:layout_marginTop="@dimen/mediumSpace"
+    android:layout_marginStart="@dimen/mediumSpace"
+    android:layout_marginEnd="@dimen/smallSpace"
     android:text="Conversar"
-    app:layout_constraintStart_toEndOf="@+id/btn_list_item_hero_reserve"
+    app:layout_constraintEnd_toStartOf="@+id/btn_list_item_hero_reserve"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/img_list_item_hero_photo"/>
 
   <Button
     android:id="@+id/btn_list_item_hero_reserve"
+    style="@style/Button.Reservation"
     android:layout_width="0dp"
-    android:layout_height="wrap_content"
+    android:layout_height="@dimen/buttonHeight"
+    android:layout_marginTop="@dimen/mediumSpace"
+    android:layout_marginStart="@dimen/smallSpace"
+    android:layout_marginEnd="@dimen/mediumSpace"
     android:text="Reservar de novo"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toEndOf="@+id/btn_list_item_hero_chat"
@@ -38,39 +46,44 @@
     android:id="@+id/txt_list_item_hero_name"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/mediumSpace"
+    android:layout_marginStart="@dimen/smallSpace"
+    android:textSize="18sp"
     app:layout_constraintStart_toEndOf="@+id/img_list_item_hero_photo"
     app:layout_constraintTop_toTopOf="parent"
-    tools:layout_editor_absoluteX="165dp"
-    tools:layout_editor_absoluteY="16dp"
     tools:text="@tools:sample/first_names"/>
 
   <TextView
+    android:textSize="14sp"
     android:id="@+id/txt_list_item_hero_addres"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/smallSpace"
+    android:layout_marginStart="@dimen/smallSpace"
     app:layout_constraintStart_toEndOf="@+id/img_list_item_hero_photo"
     app:layout_constraintTop_toBottomOf="@+id/txt_list_item_hero_name"
-    tools:layout_editor_absoluteX="165dp"
-    tools:layout_editor_absoluteY="58dp"
     tools:text="@tools:sample/cities"/>
 
   <TextView
+    android:textStyle="bold"
+    android:textSize="16sp"
     android:id="@+id/txt_list_item_hero_price"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="8dp"
+    android:layout_marginTop="@dimen/mediumSpace"
+    android:layout_marginEnd="@dimen/smallSpace"
     android:text="TextView"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toTopOf="parent"/>
 
   <TextView
-    app:layout_constraintEnd_toEndOf="parent"
     android:id="@+id/txt_list_item_hero_price_tip"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
+    android:layout_marginTop="@dimen/smallSpace"
+    android:layout_marginEnd="@dimen/smallSpace"
     android:text="TextView"
+    app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/txt_list_item_hero_price"
-    tools:layout_editor_absoluteX="325dp"/>
+    />
 </androidx.constraintlayout.widget.ConstraintLayout>
