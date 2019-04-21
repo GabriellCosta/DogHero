@@ -17,7 +17,7 @@ internal object Versions {
     const val livedata ="2.0.0"
     const val constraintLayout= "1.1.2"
     const val gson = "2.8.5"
-    const val imageFetcher = "2.5.2"
+    const val imageFetcher = "4.9.0"
 
 }
 
@@ -48,7 +48,7 @@ object Dependencies {
 
     val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
 
-    val imageFetcher = "com.squareup.picasso:picasso:${Versions.imageFetcher}"
+    val imageFetcher = "com.github.bumptech.glide:glide:${Versions.imageFetcher}"
 
 }
 
