@@ -2,6 +2,7 @@
 <LinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:orientation="vertical">
@@ -39,7 +40,11 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_hero_list_recent_title"/>
+        app:layout_constraintTop_toBottomOf="@+id/txt_hero_list_recent_title"
+        tools:itemCount="2"
+        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/list_item_dog_hero"
+        tools:orientation="vertical"/>
 
       <TextView
         android:id="@+id/txt_hero_list_favorite_title"
@@ -61,7 +66,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_hero_list_favorite_title"/>
+        app:layout_constraintTop_toBottomOf="@+id/txt_hero_list_favorite_title"
+        tools:itemCount="3"
+        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/list_item_dog_hero"
+        tools:orientation="vertical"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
