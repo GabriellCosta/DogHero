@@ -58,6 +58,8 @@
     android:layout_marginTop="@dimen/mediumSpace"
     android:layout_marginStart="@dimen/smallSpace"
     android:textSize="18sp"
+    android:alpha="0.66"
+    android:textStyle="bold"
     app:layout_constraintStart_toEndOf="@+id/img_list_item_hero_photo"
     app:layout_constraintTop_toTopOf="parent"
     tools:text="@tools:sample/first_names"/>
@@ -66,9 +68,11 @@
     android:id="@+id/txt_list_item_hero_addres"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:alpha="0.42"
     android:layout_marginTop="@dimen/smallSpace"
     android:layout_marginStart="@dimen/smallSpace"
     android:textSize="14sp"
+
     app:layout_constraintStart_toEndOf="@+id/img_list_item_hero_photo"
     app:layout_constraintTop_toBottomOf="@+id/txt_list_item_hero_name"
     tools:text="@tools:sample/cities"/>
@@ -91,6 +95,7 @@
     android:layout_marginTop="@dimen/smallSpace"
     android:layout_marginEnd="@dimen/smallSpace"
     tools:text="R$ 36,55"
+    android:alpha="0.66"
     android:textSize="16sp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/btn_item_list_favorite"/>
