@@ -56,6 +56,6 @@ class HeroTransformerTest {
     fun givenDogHeroUser_whenConverted_shouldHaveCorrectPrice() {
         val result = transformer.map(mock)
 
-        assertEquals("77", result.price)
+        assertEquals("R$ 77,00", result.price)
     }
 }
