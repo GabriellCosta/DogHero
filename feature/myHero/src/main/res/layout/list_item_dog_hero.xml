@@ -54,33 +54,42 @@
     tools:text="@tools:sample/first_names"/>
 
   <TextView
-    android:textSize="14sp"
     android:id="@+id/txt_list_item_hero_addres"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/smallSpace"
     android:layout_marginStart="@dimen/smallSpace"
+    android:textSize="14sp"
     app:layout_constraintStart_toEndOf="@+id/img_list_item_hero_photo"
     app:layout_constraintTop_toBottomOf="@+id/txt_list_item_hero_name"
     tools:text="@tools:sample/cities"/>
 
+  <ImageButton
+    android:layout_marginEnd="@dimen/mediumSpace"
+    android:layout_marginTop="@dimen/mediumSpace"
+    android:background="@drawable/icon_like_border_vector_gray_battleship"
+    android:id="@+id/btn_item_list_favorite"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
   <TextView
-    android:textStyle="bold"
-    android:textSize="16sp"
     android:id="@+id/txt_list_item_hero_price"
+    android:textStyle="bold"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/mediumSpace"
     android:layout_marginEnd="@dimen/smallSpace"
     android:text="TextView"
+    android:textSize="16sp"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent"/>
+    app:layout_constraintTop_toBottomOf="@+id/btn_item_list_favorite"/>
 
   <TextView
     android:id="@+id/txt_list_item_hero_price_tip"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/smallSpace"
     android:layout_marginEnd="@dimen/smallSpace"
     android:text="TextView"
     app:layout_constraintEnd_toEndOf="parent"

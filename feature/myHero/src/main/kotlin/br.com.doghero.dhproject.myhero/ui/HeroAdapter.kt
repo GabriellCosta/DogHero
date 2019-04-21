@@ -38,6 +38,8 @@ internal class HeroAdapter(private val heroList: List<HeroVO>) :
         private val addressView by bind<TextView>(R.id.txt_list_item_hero_addres)
         private val priceView by bind<TextView>(R.id.txt_list_item_hero_price)
 
+        private val favoriteButton by bind<ImageView>(R.id.btn_item_list_favorite)
+
         fun bind(item: HeroVO) {
 
             item.apply {
@@ -46,6 +48,8 @@ internal class HeroAdapter(private val heroList: List<HeroVO>) :
                 addressView.text = item.address
                 priceView.text = item.price
             }
+            
+            favoriteButton.setOnClickListener(FavoriteFlipButtonBehavior())
         }
     }
 }
