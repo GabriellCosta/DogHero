@@ -2,4 +2,7 @@
 <resources>
   <string name="hero_list_recent_title">Heróis com quem me hospedei</string>
   <string name="hero_list_favorite_title">Heróis favoritos</string>
+
+  <string name="hero_item_list_favorite_selected">Hero favoritado, clique para desfavoritar</string>
+  <string name="hero_item_list_favorite_unselected">Hero não favoritado, clique para favoritar</string>
 </resources>

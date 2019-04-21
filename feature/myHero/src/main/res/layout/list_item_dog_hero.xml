@@ -65,6 +65,7 @@
     tools:text="@tools:sample/cities"/>
 
   <ImageButton
+    android:contentDescription="@string/hero_item_list_favorite_unselected"
     android:layout_marginEnd="@dimen/mediumSpace"
     android:layout_marginTop="@dimen/mediumSpace"
     android:background="@drawable/icon_like_border_vector_gray_battleship"

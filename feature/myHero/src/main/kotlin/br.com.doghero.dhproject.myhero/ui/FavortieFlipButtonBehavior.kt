@@ -22,12 +22,15 @@ class FavoriteFlipButtonBehavior : View.OnClickListener {
             R.drawable.icon_like_filled_vector_red
         )
 
-        favoriteButton.setImageDrawable(
-            if (clicked)
-                unfilled
-            else
-                filled
-        )
+        if (clicked) {
+            favoriteButton.setImageDrawable(unfilled)
+            favoriteButton.contentDescription =
+                it.resources.getString(R.string.hero_item_list_favorite_unselected)
+        } else {
+            favoriteButton.setImageDrawable(filled)
+            favoriteButton.contentDescription =
+                it.resources.getString(R.string.hero_item_list_favorite_selected)
+        }
 
         clicked = !clicked
     }
