@@ -3,7 +3,9 @@
   package="br.com.doghero.dhproject.myhero">
 
   <application tools:ignore="GoogleAppIndexingWarning">
-    <activity android:name=".ui.HeroListActivity">
+    <activity
+      android:name=".ui.HeroListActivity"
+      android:theme="@style/Theme.AppCompat.Light.NoActionBar">
       <intent-filter>
         <category android:name="android.intent.category.LAUNCHER"/>
         <action android:name="android.intent.action.MAIN"/>
