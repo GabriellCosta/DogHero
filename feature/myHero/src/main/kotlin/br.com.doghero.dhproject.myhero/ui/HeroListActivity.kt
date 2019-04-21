@@ -3,7 +3,6 @@ package br.com.doghero.dhproject.myhero.ui
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.doghero.dhproject.myhero.R
 import br.com.doghero.dhproject.myhero.service.Api
@@ -20,6 +19,8 @@ class HeroListActivity : AppCompatActivity() {
     private val favoriteListView by bind<RecyclerView>(R.id.rv_hero_list_favorite)
     private val loading by bind<View>(R.id.loading_hero_list)
     private val scrollView by bind<View>(R.id.scroll_hero_list)
+
+    private val recyclerPreparer = RecyclerPreparer()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,16 +49,11 @@ class HeroListActivity : AppCompatActivity() {
         scrollView.visibility = View.VISIBLE
     }
 
-    private fun recentsSuccess(list : List<HeroVO>) {
-        recentListView.adapter = HeroAdapter(list)
-        recentListView.addItemDecoration(HeroItemDecoration(resources))
-        recentListView.layoutManager = LinearLayoutManager(this)
-
+    private fun recentsSuccess(list: List<HeroVO>) {
+        recyclerPreparer.prepareRecyclerView(recentListView, list)
     }
 
-    private fun favoriteSuccess(list : List<HeroVO>) {
-        favoriteListView.adapter = HeroAdapter(list)
-        favoriteListView.addItemDecoration(HeroItemDecoration(resources))
-        favoriteListView.layoutManager = LinearLayoutManager(this)
+    private fun favoriteSuccess(list: List<HeroVO>) {
+        recyclerPreparer.prepareRecyclerView(favoriteListView, list)
     }
 }
