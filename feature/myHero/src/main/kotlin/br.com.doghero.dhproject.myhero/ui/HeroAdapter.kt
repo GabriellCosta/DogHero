@@ -34,6 +34,7 @@ internal class HeroAdapter(private val heroList: List<HeroVO>) :
         private val imageView by bind<ImageView>(R.id.img_list_item_hero_photo)
         private val nameView by bind<TextView>(R.id.txt_list_item_hero_name)
         private val addressView by bind<TextView>(R.id.txt_list_item_hero_addres)
+        private val priceView by bind<TextView>(R.id.txt_list_item_hero_price)
 
         fun bind(item : HeroVO) {
 
@@ -46,6 +47,7 @@ internal class HeroAdapter(private val heroList: List<HeroVO>) :
 
                 nameView.text = item.userName
                 addressView.text = item.address
+                priceView.text = item.price
             }
         }
 
