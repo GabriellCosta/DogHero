@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <dimen name="buttonHeight">40dp</dimen>
+  <dimen name="userImage">64dp</dimen>
+
+  <dimen name="smallSpace">8dp</dimen>
+  <dimen name="mediumSpace">16dp</dimen>
+
+  <dimen name="buttonRadius">4dp</dimen>
+
+</resources>
