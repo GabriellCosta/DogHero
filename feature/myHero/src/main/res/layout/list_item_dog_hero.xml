@@ -7,21 +7,21 @@
   android:layout_height="wrap_content">
 
   <ImageView
-    android:contentDescription="@string/hero_list_image_content_description"
     android:id="@+id/img_list_item_hero_photo"
     android:layout_width="@dimen/userImage"
     android:layout_height="@dimen/userImage"
     android:layout_marginTop="@dimen/mediumSpace"
     android:layout_marginStart="@dimen/mediumSpace"
+    android:contentDescription="@string/hero_list_image_content_description"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     tools:srcCompat="@tools:sample/avatars"/>
 
   <ImageView
-    android:contentDescription="@string/hero_item_list_super_hero_content_description"
     android:id="@+id/img_list_item_super_hero"
     android:layout_width="@dimen/iconImage"
     android:layout_height="@dimen/iconImage"
+    android:contentDescription="@string/hero_item_list_super_hero_content_description"
     android:src="@drawable/host_list_icon_badge"
     app:layout_constraintBottom_toBottomOf="@+id/img_list_item_hero_photo"
     app:layout_constraintEnd_toEndOf="@+id/img_list_item_hero_photo"/>
@@ -54,13 +54,13 @@
 
   <TextView
     android:id="@+id/txt_list_item_hero_name"
+    android:textStyle="bold"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/mediumSpace"
     android:layout_marginStart="@dimen/smallSpace"
-    android:textSize="18sp"
     android:alpha="0.66"
-    android:textStyle="bold"
+    android:textSize="18sp"
     app:layout_constraintStart_toEndOf="@+id/img_list_item_hero_photo"
     app:layout_constraintTop_toTopOf="parent"
     tools:text="@tools:sample/first_names"/>
@@ -69,9 +69,9 @@
     android:id="@+id/txt_list_item_hero_addres"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:alpha="0.42"
     android:layout_marginTop="@dimen/smallSpace"
     android:layout_marginStart="@dimen/smallSpace"
+    android:alpha="0.42"
     android:textSize="14sp"
 
     app:layout_constraintStart_toEndOf="@+id/img_list_item_hero_photo"
@@ -95,19 +95,19 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/smallSpace"
     android:layout_marginEnd="@dimen/smallSpace"
-    tools:text="R$ 36,55"
     android:alpha="0.66"
     android:textSize="16sp"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/btn_item_list_favorite"/>
+    app:layout_constraintTop_toBottomOf="@+id/btn_item_list_favorite"
+    tools:text="R$ 36,55"/>
 
   <TextView
-    android:textSize="12sp"
     android:id="@+id/txt_list_item_hero_price_tip"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginEnd="@dimen/smallSpace"
     android:text="@string/list_item_price_description"
+    android:textSize="12sp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/txt_list_item_hero_price"
     />
