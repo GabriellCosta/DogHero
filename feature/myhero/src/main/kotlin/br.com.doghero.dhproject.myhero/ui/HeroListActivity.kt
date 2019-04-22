@@ -39,7 +39,6 @@ class HeroListActivity : AppCompatActivity(), KodeinAware {
         viewModel.recents
             .observeOnSuccess(this, ::recentsSuccess)
 
-
         viewModel.favorites
             .observeOnSuccess(this, ::favoriteSuccess)
 

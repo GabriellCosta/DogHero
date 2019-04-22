@@ -25,7 +25,6 @@ internal class MyHeroesViewModel(private val repositoryImpl: RepositoryImpl) : V
             val favoriteList = it.favorites.map(uiTransformer::map)
 
             favorites.postValue(UiSuccess(favoriteList))
-
         }
     }
 }

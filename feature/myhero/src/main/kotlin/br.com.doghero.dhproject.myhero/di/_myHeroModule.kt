@@ -23,5 +23,4 @@ val myHeroModule = Kodein.Module("myHeroModule") {
     bind() from provider {
         MyHeroesViewModel(instance())
     }
-
 }

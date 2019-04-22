@@ -17,10 +17,8 @@ class CurrencyFormatterTest {
         assertEquals("R$ 4,00", convertUsingCurrencyFormatter(4.toDouble()))
         assertEquals("R$ 0,40", convertUsingCurrencyFormatter(0.4))
         assertEquals("R$ 0,04", convertUsingCurrencyFormatter(.04))
-
     }
 
     fun convertUsingCurrencyFormatter(value: Double) =
         currencyFormatter.format(BigDecimal.valueOf(value))
-
 }

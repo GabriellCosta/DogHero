@@ -58,4 +58,3 @@ internal class HeroAdapter(private val heroList: List<HeroVO>) :
         }
     }
 }
-

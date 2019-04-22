@@ -7,5 +7,5 @@ internal class CurrencyFormatter {
 
     private val formatter = NumberFormat.getCurrencyInstance(brazilianLocation())
 
-    fun format(value: BigDecimal) : String = formatter.format(value)
+    fun format(value: BigDecimal): String = formatter.format(value)
 }

@@ -20,5 +20,4 @@ internal class HeroItemDecoration(resources: Resources) : RecyclerView.ItemDecor
 
         outRect.top = itemSizeOffset
     }
-
 }
