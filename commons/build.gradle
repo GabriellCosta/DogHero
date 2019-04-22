@@ -7,4 +7,6 @@ dependencies {
 
     implementation Dependencies.kotlinStdlib
 
+    implementation Dependencies.viewModelExtensions
+
 }
