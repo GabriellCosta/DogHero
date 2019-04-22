@@ -19,5 +19,6 @@ android {
 
 dependencies {
     implementation project(":feature:myhero")
+    implementation project(':commons')
 
 }

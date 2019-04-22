@@ -4,16 +4,20 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import br.com.doghero.dhproject.commons.di.viewModel
 import br.com.doghero.dhproject.myhero.R
-import br.com.doghero.dhproject.myhero.service.Api
-import br.com.doghero.dhproject.myhero.service.repository.RepositoryImpl
 import br.com.doghero.dhproject.myhero.ui.vo.HeroVO
 import br.com.doghero.dhproject.myhero.util.bind
 import br.com.doghero.dhproject.myhero.viewmodel.MyHeroesViewModel
-import br.com.doghero.dhproject.network.NetworkClient
 import br.com.doghero.dhproject.network.ui.observeOnSuccess
+import org.kodein.di.Kodein
+import org.kodein.di.KodeinAware
+import org.kodein.di.android.closestKodein
 
-class HeroListActivity : AppCompatActivity() {
+class HeroListActivity : AppCompatActivity(), KodeinAware {
+
+    override val kodein: Kodein by closestKodein()
+    private val viewModel: MyHeroesViewModel by viewModel()
 
     private val recentListView by bind<RecyclerView>(R.id.rv_hero_list_recent)
     private val favoriteListView by bind<RecyclerView>(R.id.rv_hero_list_favorite)
@@ -30,8 +34,6 @@ class HeroListActivity : AppCompatActivity() {
     }
 
     private fun prepareLayout() {
-        val viewModel = MyHeroesViewModel(RepositoryImpl(NetworkClient.getApi(Api::class.java)))
-
         viewModel.myHeroes.observeOnSuccess(this, ::fetchSuccess)
 
         viewModel.recents

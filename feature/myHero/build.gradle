@@ -7,6 +7,7 @@ apply plugin: 'kotlin-android'
 dependencies {
 
     implementation project(':network')
+    implementation project(':commons')
 
     implementation Dependencies.kotlinStdlib
 
