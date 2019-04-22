@@ -59,5 +59,10 @@ subprojects {
                 androidTest.java.srcDirs += 'src/androidTest/kotlin'
             }
         }
+
+        dependencies {
+            implementation dependencies.Dependencies.kodein
+            implementation dependencies.Dependencies.kodeinAndroid
+        }
     }
 }
