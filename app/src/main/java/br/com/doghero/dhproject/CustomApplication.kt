@@ -8,9 +8,9 @@ import org.kodein.di.KodeinAware
 
 internal class CustomApplication : Application(), KodeinAware {
 
-   override val kodein = Kodein {
+    override val kodein = Kodein {
 
-       import(myHeroModule)
-       import(commonsModule)
-   }
+        import(myHeroModule)
+        import(commonsModule)
+    }
 }
