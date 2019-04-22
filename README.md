@@ -26,3 +26,7 @@ Desafio tecnico apresentando a intereção com uma api mockada
   
     * Versão de Debug -> installDebug
     * Versão de Release -> installRelease
+    
+# Melhorias
+
+ Existem alguns pontos que ainda faltam ser aplicados, os memso se encontram nas [issues](https://github.com/GabriellCosta/DogHero/issues)
