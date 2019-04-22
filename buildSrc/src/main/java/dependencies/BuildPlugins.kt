@@ -2,7 +2,7 @@ package dependencies
 
 object PluginsVersions {
     const val kotlin = "1.3.21"
-    const val androidGradlePlugin = "3.3.2"
+    const val androidGradlePlugin = "3.4.0"
     const val detekt = "1.0.0.RC8"
 }
 
