@@ -21,6 +21,7 @@ Desafio tecnico apresentando a intereção com uma api mockada
 # Usando via CLI
 
   Para gerar um apk -> assemble
+  
   Para instalar o apk:
   
     * Versão de Debug -> installDebug
