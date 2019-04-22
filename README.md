@@ -18,9 +18,10 @@ Desafio tecnico apresentando a intereção com uma api mockada
 # Arquitetura
   O Aplicativo segue tentando usar o mais basico de tudo que for possível para ser simples, existem algumas problemas em relação a UI que foram pedidos e implementados por falta de refinamento, mas sendo somente  um desafio segue desta maneira
 
-# Usando vi CLI
+# Usando via CLI
 
   Para gerar um apk -> assemble
   Para instalar o apk:
+  
     * Versão de Debug -> installDebug
     * Versão de Release -> installRelease
